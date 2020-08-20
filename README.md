@@ -1,10 +1,10 @@
 # CSDNet-CSDGAN
 
-[Learning Deep Context-Sensitive Decomposition for Low-Light Image Enhancement]
+[this is the code for the paper "Learning Deep Context-Sensitive Decomposition for Low-Light Image Enhancement"]
 
 ## Environment Preparing
 ```
-python3.6
+python 3.6
 pytorch 0.4.1
 ```
 
@@ -12,7 +12,8 @@ pytorch 0.4.1
 
 Download [pretrained model](https://drive.google.com/file/d/1AkV-n2MdyfuZTFvcon8Z4leyVb0i7x63/view?usp=sharing) and put them into `./checkpoints/`
 
-```python test.py 
+```
+python test.py 
 --dataroot           #The folder path of the picture you want to test
 E:/test/
 --name               #The checkpoint name
