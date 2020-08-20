@@ -1,3 +1,0 @@
-torch==0.3.1
-visdom
-dominate
