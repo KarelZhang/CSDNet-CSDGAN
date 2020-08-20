@@ -25,5 +25,4 @@ normal or lite
 --gpu_ids            #could be single or multiple
 0
 ```
-
-Thank you to [EnlightenGAN](https://github.com/VITA-Group/EnlightenGAN) for providing the basis for this code.
+A great thanks to [EnlightenGAN](https://github.com/VITA-Group/EnlightenGAN) for providing the basis for this code.
