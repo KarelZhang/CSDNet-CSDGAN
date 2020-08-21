@@ -10,7 +10,7 @@ pytorch 0.4.1
 
 ### Testing
 
-Download [pretrained model](https://drive.google.com/file/d/1AkV-n2MdyfuZTFvcon8Z4leyVb0i7x63/view?usp=sharing) and put them into `./checkpoints/`
+Download [pretrained model](https://drive.google.com/drive/folders/1kocUbWn3aMkRX1_yeXNzY2bfCas07H6I?usp=sharing) and put them into `./checkpoints/`
 
 ```
 python test.py 
