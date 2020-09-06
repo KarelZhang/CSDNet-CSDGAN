@@ -1,6 +1,6 @@
 # CSDNet-CSDGAN
 
-[this is the code for the paper "Learning Deep Context-Sensitive Decomposition for Low-Light Image Enhancement"]
+this is the code for the paper "Learning Deep Context-Sensitive Decomposition for Low-Light Image Enhancement"
 
 ## Environment Preparing
 ```
