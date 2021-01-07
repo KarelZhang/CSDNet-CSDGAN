@@ -5,10 +5,7 @@ import util.util as util
 from util.image_pool import ImagePool
 from .base_model import BaseModel
 import torch.nn.functional as F
-from . import networks_f_l_tanh as networks
-# from . import networks
-import sys
-from .ssim import SSIM
+from . import networks as networks
 
 
 class TestModel(BaseModel):

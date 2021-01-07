@@ -23,8 +23,6 @@ dataset = data_loader.load_data()
 model = TestModel()
 model.initialize(opt)
 print("model [%s] was created" % (model.name()))
-# visualizer = Visualizer(opt)
-# create website
 out_dir = os.path.join("./ablation/", opt.name)
 if not os.path.exists(out_dir):
     os.mkdir(out_dir)
