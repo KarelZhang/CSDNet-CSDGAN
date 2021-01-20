@@ -27,7 +27,7 @@ class TestModel(BaseModel):
         self.max = networks.max_operation()
         self.edge = networks.edge_operation()
 
-        self.net = networks.define_network(opt.network_model, self.gpu_ids)
+        self.net = networks.define_network(opt.name, self.gpu_ids)
 
         self.load_network(self.net)
 

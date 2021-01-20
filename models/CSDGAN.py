@@ -46,9 +46,9 @@ def pad_tensor_back(input, pad_left, pad_right, pad_top, pad_bottom):
     return input[:, :, pad_top: height - pad_bottom, pad_left: width - pad_right]
 
 
-class CSDNet(nn.Module):
+class CSDGAN(nn.Module):
     def __init__(self):
-        super(CSDNet, self).__init__()
+        super(CSDGAN, self).__init__()
 
         p = 1
 
@@ -331,7 +331,7 @@ class CSDNet(nn.Module):
 
         latent = self.tanh(self.conv10(conv9))
 
-        output = latent / self.gray
+        output = latent / self.gray + input
 
         output = pad_tensor_back(output, pad_left, pad_right, pad_top, pad_bottom)
         latent = pad_tensor_back(latent, pad_left, pad_right, pad_top, pad_bottom)

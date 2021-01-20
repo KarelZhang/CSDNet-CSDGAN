@@ -87,10 +87,10 @@ def define_network(which_model_netG,gpu_ids=[]):
     if use_gpu:
         assert (torch.cuda.is_available())
 
-    if which_model_netG == 'normal':
+    if which_model_netG == 'CSDNet_UPE' or which_model_netG == 'CSDNet_LOL':
         from .CSDNet import CSDNet
         net = CSDNet()
-    elif which_model_netG == 'lite':
+    elif which_model_netG == 'LiteCSDNet_UPE' or which_model_netG == 'LiteCSDNet_LOL':
         from .LiteCSDNet import LiteCSDNet
         net = LiteCSDNet()
     else:
