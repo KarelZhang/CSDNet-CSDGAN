@@ -93,6 +93,12 @@ def define_network(which_model_netG,gpu_ids=[]):
     elif which_model_netG == 'LiteCSDNet_UPE' or which_model_netG == 'LiteCSDNet_LOL':
         from .LiteCSDNet import LiteCSDNet
         net = LiteCSDNet()
+    elif which_model_netG == 'SLiteCSDNet_UPE' or which_model_netG == 'SLiteCSDNet_LOL':
+        from .SLiteCSDNet import SLiteCSDNet
+        net = SLiteCSDNet()
+    elif which_model_netG == 'CSDGAN':
+        from .CSDGAN import CSDGAN
+        net = CSDGAN()
     else:
         raise NotImplementedError('The model of the network [%s] is not recognized' % which_model_netG)
     if len(gpu_ids) > 0:

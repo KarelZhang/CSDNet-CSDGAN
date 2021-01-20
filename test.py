@@ -23,7 +23,7 @@ dataset = data_loader.load_data()
 model = TestModel()
 model.initialize(opt)
 print("model [%s] was created" % (model.name()))
-out_dir = os.path.join("./ablation/", opt.name)
+out_dir = os.path.join("./results/", opt.name)
 if not os.path.exists(out_dir):
     os.mkdir(out_dir)
 print('the number of test image:')
@@ -51,10 +51,7 @@ def save_image(image_numpy, image_path):
 with torch.no_grad():
     for i, data in enumerate(dataset):
         model.set_input(data)
-        start_time = time.time()
         visuals = model.predict()
-        end_time = time.time()
-        print('using %f seconds' % (end_time - start_time))
         img_path = model.get_image_paths()
         print('process image... %s' % img_path)
         save_images(out_dir, visuals, img_path)

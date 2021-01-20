@@ -6,6 +6,7 @@ from util.image_pool import ImagePool
 from .base_model import BaseModel
 import torch.nn.functional as F
 from . import networks as networks
+import time
 
 
 class TestModel(BaseModel):
@@ -30,9 +31,6 @@ class TestModel(BaseModel):
         self.net = networks.define_network(opt.name, self.gpu_ids)
 
         self.load_network(self.net)
-
-        print('---------- Networks initialized -------------')
-        networks.print_network(self.net)
 
         self.net.eval()
         print('-----------------------------------------------')
@@ -59,10 +57,12 @@ class TestModel(BaseModel):
         self.gadience = self.max_out + self.edge_out
         self.real_A_gray = torch.cat([self.gadience, self.real_A_gray], 1)
 
+        start_time = time.time()
         self.fake_B, self.latent_real_A, self.gray = self.net.forward(self.real_img, self.real_A_gray)
-        
+        print("using {}".format(time.time() - start_time))
+
         fake_B = util.tensor2im(self.fake_B.data)
- 
+
         return OrderedDict([('fake_B', fake_B)])
 
     # get image paths
