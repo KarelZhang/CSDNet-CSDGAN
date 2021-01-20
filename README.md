@@ -19,7 +19,7 @@ python test.py
 --dataroot           #The folder path of the picture you want to test
 E:/test/
 --name               #The checkpoint name
-CSDNet_UPE or CSDNet_LOL or CSDGAN or LiteCSDNet_UPE
+CSDNet_UPE or CSDNet_LOL or CSDGAN or LiteCSDNet_UPE or LiteCSDNet_LOL or SLiteCSDNet_UPE or SLiteCSDNet_LOL
 --gpu_ids            #could be single or multiple
 0
 ```
